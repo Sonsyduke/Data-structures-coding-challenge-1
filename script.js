@@ -63,8 +63,5 @@ printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
 printGoals(...game.scored);
 
 // Question 7
-if (team1 < team2) {
-  console.log(`The winner is ${game.team1}`);
-} else {
-  console.log(`The winner is ${game.team2}`);
-}
+team1 < team2 && console.log(`Team 1 is more likely to win`);
+team1 > team2 && console.log(`Team 2 is more likely to win`);
