@@ -42,3 +42,7 @@ const game = {
 };
 
 let [players1, players2] = game.players;
+const [gk, ...fieldPlayers] = players1;
+
+console.log(gk);
+console.log(fieldPlayers);
