@@ -40,3 +40,5 @@ const game = {
     team2: 6.5,
   },
 };
+
+let [players1, players2] = game.players;
