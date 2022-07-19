@@ -59,9 +59,22 @@ function printGoals(...players) {
   }
 }
 
-printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
-printGoals(...game.scored);
+// printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+// printGoals(...game.scored);
 
 // Question 7
-team1 < team2 && console.log(`Team 1 is more likely to win`);
-team1 > team2 && console.log(`Team 2 is more likely to win`);
+// team1 < team2 && console.log(`Team 1 is more likely to win`);
+// team1 > team2 && console.log(`Team 2 is more likely to win`);
+
+// ======================= CODING CHALLENGE 2 =======================
+
+// Question 1
+let goal = 1;
+
+for (const player of game.scored) {
+  console.log(`Goal ${goal++}: ${player}`);
+}
+
+// for (let i = 0; i < game.scored.length; i++) {
+//   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
+// }
