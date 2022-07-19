@@ -47,3 +47,5 @@ let [players1, players2] = game.players;
 const [gk, ...fieldPlayers] = players1;
 // Question 3
 const allPlayers = [...players1, ...players2];
+// Question 4
+const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
