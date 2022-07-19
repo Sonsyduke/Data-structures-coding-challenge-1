@@ -53,12 +53,18 @@ const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 const {team1, x: draw, team2} = game.odds;
 // Question 6
 function printGoals(...players) {
-  let goalsScored = 1;
+  console.log(`${players.length} goals were scored`);
   for (let i = 0; i < players.length; i++) {
-    console.log(`${players[i]} scored the ${goalsScored} goal.`);
-    goalsScored++;
+    console.log(`${players[i]}`);
   }
 }
 
-// printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
 printGoals(...game.scored);
+
+// Question 7
+if (team1 < team2) {
+  console.log(`The winner is ${game.team1}`);
+} else {
+  console.log(`The winner is ${game.team2}`);
+}
