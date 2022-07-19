@@ -51,4 +51,14 @@ const allPlayers = [...players1, ...players2];
 const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 // Question 5
 const {team1, x: draw, team2} = game.odds;
-console.log(draw);
+// Question 6
+function printGoals(...players) {
+  let goalsScored = 1;
+  for (let i = 0; i < players.length; i++) {
+    console.log(`${players[i]} scored the ${goalsScored} goal.`);
+    goalsScored++;
+  }
+}
+
+// printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals(...game.scored);
