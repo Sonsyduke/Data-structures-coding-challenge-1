@@ -41,8 +41,9 @@ const game = {
   },
 };
 
+// Question 1
 let [players1, players2] = game.players;
+// Question 2
 const [gk, ...fieldPlayers] = players1;
-
-console.log(gk);
-console.log(fieldPlayers);
+// Question 3
+const allPlayers = [...players1, ...players2];
