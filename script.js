@@ -69,12 +69,20 @@ function printGoals(...players) {
 // ======================= CODING CHALLENGE 2 =======================
 
 // Question 1
-let goal = 1;
+// let goal = 1;
 
-for (const player of game.scored) {
-  console.log(`Goal ${goal++}: ${player}`);
-}
+// for (const player of game.scored) {
+//   console.log(`Goal ${goal++}: ${player}`);
+// }
 
 // for (let i = 0; i < game.scored.length; i++) {
 //   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
 // }
+
+// Question 2
+const keys = Object.values(game.odds);
+let total = 0;
+for (const avg of keys) {
+  total += avg;
+}
+console.log(`The average of the odds are ${total / 3}`);
