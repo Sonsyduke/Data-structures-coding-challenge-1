@@ -79,10 +79,39 @@ function printGoals(...players) {
 //   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
 // }
 
+// ANSWER
+// for (const [i, player] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${game.scored[i]}`);
+// }
+
 // Question 2
-const keys = Object.values(game.odds);
-let total = 0;
-for (const avg of keys) {
-  total += avg;
+// const values = Object.values(game.odds);
+// let total = 0;
+// for (const avg of values) {
+//   total += avg;
+// }
+// console.log(`The average of the odds are ${total / values.length}`);
+
+// ANSWER
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) {
+//   average += odd;
+// }
+// average /= odds.length;
+// console.log(average);
+
+// Question 3
+// for (const odd of values) {
+//   console.log(`Odd of victory : ${values.}`);
+// }
+
+// for (let i = 0; i < values.length; i++) {
+//   console.log(`Odd of victory : ${values[i]}`);
+// }
+
+// ANSWER
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
 }
-console.log(`The average of the odds are ${total / 3}`);
