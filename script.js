@@ -46,3 +46,6 @@ const [players1, players2] = game.players;
 
 // Question 2:
 const [gk, ...otherPlayers] = players1;
+
+// Question 3:
+const players1Final = [...players1, ...players2];
