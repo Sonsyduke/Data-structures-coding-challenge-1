@@ -44,5 +44,5 @@ const game = {
 // Question 1:
 const [players1, players2] = game.players;
 
-console.log(players1);
-console.log(players2);
+// Question 2:
+const [gk, ...otherPlayers] = players1;
