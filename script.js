@@ -53,4 +53,5 @@ const allPlayers = [...players1, ...players2];
 // Question 4:
 const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
 
-console.log(players1Final);
+// Question 5:
+const {team1, x: draw, team2} = game.odds;
