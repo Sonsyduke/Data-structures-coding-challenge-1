@@ -92,18 +92,41 @@ const arrayOdds = Object.values(game.odds);
 // console.log(averageOdd);
 
 // Question 3
-const {
-  team1,
-  team2,
-  odds: {team1: oddT1, x: draw, team2: oddT2},
-} = game;
+// const {
+//   team1,
+//   team2,
+//   odds: {team1: oddT1, x: draw, team2: oddT2},
+// } = game;
 
-for (const odd of arrayOdds) {
-  if (odd === 1.33) {
-    console.log(`Odd of victory ${team1}: ${oddT1}`);
-  } else if (odd === 3.25) {
-    console.log(`Odd of draw: ${draw}`);
-  } else if (odd === 6.5) {
-    console.log(`Odd of victory ${team2}: ${oddT2}`);
-  }
+// for (const odd of arrayOdds) {
+//   if (odd === 1.33) {
+//     console.log(`Odd of victory ${team1}: ${oddT1}`);
+//   } else if (odd === 3.25) {
+//     console.log(`Odd of draw: ${draw}`);
+//   } else if (odd === 6.5) {
+//     console.log(`Odd of victory ${team2}: ${oddT2}`);
+//   }
+// }
+
+// Question 4
+// Try looping through the game object
+// Get the scored propeties
+// loop through it
+// Add conditions to check if the keys are the same or not
+// If they are then add to the goals scored
+// else create a new propety in the object
+const scorers = {};
+const playersScored = Object.values(game.scored);
+// for (const scorer of goalsScored) {
+//   if (scorers[scorer] === goalsScored[scorer]) {
+//     scorers[scorer] += 1;
+//   } else {
+//     scorers.goalsScored[scorer] = goalsScored[scorer];
+//   }
+// }
+
+for (let x of game.scored) {
+  scorers[x]++ || (scorers[x] = 1);
 }
+
+console.log(scorers);
