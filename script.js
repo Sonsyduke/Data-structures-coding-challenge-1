@@ -83,7 +83,7 @@ const game = {
 // }
 
 // Question 2
-const arrayOdds = Object.values(game.odds);
+// const arrayOdds = Object.values(game.odds);
 // let total = 0;
 // for (const odd of arrayOdds) {
 //   total += odd;
@@ -108,6 +108,12 @@ const arrayOdds = Object.values(game.odds);
 //   }
 // }
 
+// SOLUTION
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
+
 // Question 4
 // Try looping through the game object
 // Get the scored propeties
@@ -115,8 +121,8 @@ const arrayOdds = Object.values(game.odds);
 // Add conditions to check if the keys are the same or not
 // If they are then add to the goals scored
 // else create a new propety in the object
-const scorers = {};
-const playersScored = Object.values(game.scored);
+// const scorers = {};
+// const playersScored = Object.values(game.scored);
 // for (const scorer of goalsScored) {
 //   if (scorers[scorer] === goalsScored[scorer]) {
 //     scorers[scorer] += 1;
@@ -125,8 +131,8 @@ const playersScored = Object.values(game.scored);
 //   }
 // }
 
-for (let x of game.scored) {
-  scorers[x]++ || (scorers[x] = 1);
-}
+// for (let x of game.scored) {
+//   scorers[x]++ || (scorers[x] = 1);
+// }
 
-console.log(scorers);
+// console.log(scorers);
