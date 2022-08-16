@@ -77,7 +77,16 @@ const game = {
 // CHALLENGE 2
 
 // Question 1
-const goals = Object.entries(game.scored);
-for (const [num, player] of goals) {
-  console.log(`Goal ${+num + 1}: ${player}`);
+// const goals = Object.entries(game.scored);
+// for (const [num, player] of goals) {
+//   console.log(`Goal ${+num + 1}: ${player}`);
+// }
+
+// Question 2
+const arrayOdds = Object.values(game.odds);
+let total = 0;
+for (const odd of arrayOdds) {
+  total += odd;
 }
+const averageOdd = total / arrayOdds.length;
+console.log(averageOdd);
