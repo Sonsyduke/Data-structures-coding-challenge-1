@@ -161,4 +161,15 @@ const events = new Set(values);
 
 // Question 2
 gameEvents.delete(64);
-console.log(gameEvents);
+// console.log(gameEvents);
+
+// Question 3
+const totalMin = [...gameEvents.keys()];
+let total = 0;
+for (const num of totalMin) {
+  total += num;
+}
+const totalAverage = Math.round(total / 90);
+
+const mainStr = `An event happened, on average, every ${totalAverage} minutes`;
+console.log(mainStr);
