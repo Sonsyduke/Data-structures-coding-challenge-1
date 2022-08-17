@@ -157,4 +157,8 @@ const gameEvents = new Map([
 // Question 1
 const values = [...gameEvents.values()];
 const events = new Set(values);
-console.log(events);
+// console.log(events);
+
+// Question 2
+gameEvents.delete(64);
+console.log(gameEvents);
