@@ -172,4 +172,13 @@ for (const num of totalMin) {
 const totalAverage = Math.round(total / 90);
 
 const mainStr = `An event happened, on average, every ${totalAverage} minutes`;
-console.log(mainStr);
+// console.log(mainStr);
+
+// Question 4
+for (const [min, event] of gameEvents) {
+  if (min < 45) {
+    console.log(`[FIRST HALF] ${min}: ${event}`);
+  } else {
+    console.log(`[SECOND HALF] ${min}: ${event}`);
+  }
+}
