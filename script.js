@@ -140,27 +140,27 @@ const game = {
 // ========================
 // CHALLENGE 3
 
-const gameEvents = new Map([
-  [17, "⚽ GOAL"],
-  [36, "� Substitution"],
-  [47, "⚽ GOAL"],
-  [61, "� Substitution"],
-  [64, "� Yellow card"],
-  [69, "� Red card"],
-  [70, "� Substitution"],
-  [72, "� Substitution"],
-  [76, "⚽ GOAL"],
-  [80, "⚽ GOAL"],
-  [92, "� Yellow card"],
-]);
+// const gameEvents = new Map([
+//   [17, "⚽ GOAL"],
+//   [36, "� Substitution"],
+//   [47, "⚽ GOAL"],
+//   [61, "� Substitution"],
+//   [64, "� Yellow card"],
+//   [69, "� Red card"],
+//   [70, "� Substitution"],
+//   [72, "� Substitution"],
+//   [76, "⚽ GOAL"],
+//   [80, "⚽ GOAL"],
+//   [92, "� Yellow card"],
+// ]);
 
 // Question 1
-const values = [...gameEvents.values()];
-const events = new Set(values);
+// const values = [...gameEvents.values()];
+// const events = new Set(values);
 // console.log(events);
 
 // Question 2
-gameEvents.delete(64);
+// gameEvents.delete(64);
 // console.log(gameEvents);
 
 // Question 3
@@ -175,15 +175,49 @@ gameEvents.delete(64);
 // console.log(mainStr);
 
 // SOLUTION
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} minutes`
-);
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
 
 // Question 4
-for (const [min, event] of gameEvents) {
-  if (min < 45) {
-    console.log(`[FIRST HALF] ${min}: ${event}`);
-  } else {
-    console.log(`[SECOND HALF] ${min}: ${event}`);
+// for (const [min, event] of gameEvents) {
+//   if (min < 45) {
+//     console.log(`[FIRST HALF] ${min}: ${event}`);
+//   } else {
+//     console.log(`[SECOND HALF] ${min}: ${event}`);
+//   }
+// }
+
+// ========================
+// CHALLENGE 4
+
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+// const textarea = document.querySelector("textarea");
+const button = document.querySelector("button");
+
+function camelCase() {
+  const text = document.querySelector("textarea").value;
+  // const toLower = textarea.value.toLowerCase().trim();
+  // const arrStr = toLower.split("_");
+  // arrStr[1] = arrStr[1].replace(arrStr[1][0], arrStr[1][0].toUpperCase());
+  // const correctStr = arrStr.join("");
+
+  // console.log(correctStr);
+  const rows = text.split("\n");
+  // console.log(rows);
+  const marks = [];
+
+  for (const row of rows) {
+    const toLower = row.toLowerCase().trim();
+    const arrStr = toLower.split("_");
+    arrStr[1] = arrStr[1].replace(arrStr[1][0], arrStr[1][0].toUpperCase());
+    const correctStr = arrStr.join("");
+    const padding = correctStr.padEnd(20, " ");
+    marks.push("✅");
+    const newM = marks.join("");
+    console.log(`${padding}      ${newM}`);
   }
 }
+
+button.addEventListener("click", camelCase);
